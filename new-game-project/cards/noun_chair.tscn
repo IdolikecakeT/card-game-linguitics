@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5mljpqpelhc8"]
+
+[ext_resource type="Script" uid="uid://cmhn5inaj3a3w" path="res://cards/noun_chair.gd" id="1_1ouca"]
+
+[node name="noun_chair" type="Node2D" unique_id=1295459210]
+script = ExtResource("1_1ouca")

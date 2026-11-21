@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://elst0xn32iil"]
 
+[ext_resource type="PackedScene" uid="uid://b4d1k4i0awvd1" path="res://background.tscn" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://dceffjs8rpmpn" path="res://game.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://mikdra0s71ip" path="res://hand.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://ci0b1m5hijn0r" path="res://drawacard.tscn" id="4_fc0e3"]
+
 [node name="Game" type="Node2D" unique_id=335900139]
+script = ExtResource("1_feb5d")
+
+[node name="background" parent="." unique_id=603168285 instance=ExtResource("1_80nbo")]
+
+[node name="hand" parent="." unique_id=1290350709 instance=ExtResource("2_e2o6t")]
+
+[node name="drawacard" parent="." unique_id=1645841260 instance=ExtResource("4_fc0e3")]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ci0b1m5hijn0r"]
+
+[ext_resource type="Script" uid="uid://hbci6etetj6t" path="res://drawacard.gd" id="1_7f2vh"]
+
+[node name="drawacard" type="Node2D" unique_id=1645841260]
+script = ExtResource("1_7f2vh")
+
+[node name="Button" type="Button" parent="." unique_id=2033175366]
+offset_left = -48.0
+offset_top = -37.0
+offset_right = 48.0
+offset_bottom = 38.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

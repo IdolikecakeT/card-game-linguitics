@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dxsi36yu2g46a"]
+
+[ext_resource type="Script" uid="uid://bikve2y3sal5p" path="res://cards/verbgo.gd" id="1_ou6gv"]
+
+[node name="verbgo" type="Node2D" unique_id=1195122372]
+script = ExtResource("1_ou6gv")

@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://b4d1k4i0awvd1"]
 
+[ext_resource type="Texture2D" uid="uid://bweybea8wy86o" path="res://assets/pixelartbackground.png" id="1_oabld"]
+
 [node name="background" type="Node2D" unique_id=603168285]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=624629865]
+texture_filter = 1
+position = Vector2(324, 324)
+scale = Vector2(20.25, 20.25)
+texture = ExtResource("1_oabld")

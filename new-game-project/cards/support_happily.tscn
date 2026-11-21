@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://me74c3ik1l7k"]
+
+[ext_resource type="Script" uid="uid://bpewxk06o00qx" path="res://cards/support_happily.gd" id="1_4cai3"]
+
+[node name="support_happily" type="Node2D" unique_id=1751496549]
+script = ExtResource("1_4cai3")
