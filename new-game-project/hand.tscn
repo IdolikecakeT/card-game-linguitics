@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://mikdra0s71ip"]
 
 [node name="hand" type="Node2D" unique_id=1290350709]
+
+[node name="handui" type="HBoxContainer" parent="." unique_id=1192665470]
+offset_top = 416.0
+offset_right = 648.0
+offset_bottom = 648.0
+alignment = 1

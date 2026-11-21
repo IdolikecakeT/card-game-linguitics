@@ -8,18 +8,25 @@ func get_all_scenes(directory_path: String) -> Array:
 	var scene_files = []
 
 	if dir:
-		dir.list_dir_begin()
+		print("Successfully opened directory!")
+	else:
+		print("Failed to open directory!")
+		return scene_files
 
-		var file_name = dir.get_next()
+	dir.list_dir_begin()
 
-		while file_name != "":
-			if file_name.ends_with(".tscn"):
-				scene_files.append(directory_path + file_name)
+	var file_name = dir.get_next()
 
-			file_name = dir.get_next()
+	while file_name != "":
+		print(file_name)
 
-		dir.list_dir_end()
+		if file_name.ends_with(".tscn"):
+			scene_files.append(directory_path + file_name)
 
+		file_name = dir.get_next()
+
+	dir.list_dir_end()
+	print("Scene files",scene_files)
 	return scene_files
 
 # Called when the node enters the scene tree for the first time.

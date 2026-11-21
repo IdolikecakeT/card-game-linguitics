@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://dxsi36yu2g46a"]
 
 [ext_resource type="Script" uid="uid://bikve2y3sal5p" path="res://cards/verbgo.gd" id="1_ou6gv"]
+[ext_resource type="Texture2D" uid="uid://d0decvl5gskdw" path="res://assets/cardred.png" id="2_xirsu"]
 
 [node name="verbgo" type="Node2D" unique_id=1195122372]
 script = ExtResource("1_ou6gv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2045943721]
+texture_filter = 1
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("2_xirsu")
