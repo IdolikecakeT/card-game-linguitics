@@ -1,46 +1,46 @@
 extends Node2D
 @onready var gameinfo = get_parent()
 # button + other mechanics (coming soon) can only be interacted w/ if it is their turn or anarchy state
-var playerhand
-var playerdeck
 
 func _ready() -> void:
-	playerhand = gameinfo.playerhand
-	playerdeck = gameinfo.playerdeck
-	
-	
-	pass # Replace with function body.
+	pass
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_button_pressed() -> void:
-	drawcard(1)
+	# if its their turn
+	drawcard(gameinfo.get_current_player()[1],1)
 
-func drawcard(amount):
-	for times in amount:
-		if gameinfo.playerdeck.is_empty():
+
+func drawcard(player:int,amount):
+	for card in range(amount):
+		var source = gameinfo.players[player].deck
+		if source.is_empty():
+			source = gameinfo.saidpile
+		
+		if source.is_empty():
+			print("no cards remaining!")
+			break
+		take_cards(source,gameinfo.players[player].hand,1)
+	get_node("/root/Game/hand").update_hand(player)
+
+func take_cards(takefrom:Array,taketo:Array,quantity:int):
+	for times in quantity:
+		if takefrom.is_empty():
+			print("error empty")
 			return
-		# Randomly select a card in the deck
-		# also will only work if it is their turn or anarchy state
-		var index = randi_range(0, gameinfo.playerdeck.size() - 1)
 
-		print(playerdeck)
-		print(playerdeck.size())
-		print(index)
-
-		var chosencard = gameinfo.playerdeck[index]
+		var index = randi_range(0, takefrom.size() - 1)
+		var chosencard = takefrom[index]
 
 		# Remove it from the deck
-		gameinfo.playerdeck.remove_at(index)
+		takefrom.remove_at(index)
+		# Add the card to the handn 
+		taketo.append(chosencard)
 
-		# Load and instantiate the card scene
-		var card_scene = load(chosencard)
-		var card = card_scene.instantiate()
-
-		# Add the card to the hand
-		gameinfo.playerhand.append(card)
-		get_node("/root/Game/hand/handui").add_child(card)
+func startout(players : Array):
+	for index in range(len(gameinfo.players)):
+		drawcard(index,gameinfo.startingcardsamount)
