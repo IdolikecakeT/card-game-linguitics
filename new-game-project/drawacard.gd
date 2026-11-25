@@ -1,5 +1,5 @@
 extends Node2D
-@onready var gameinfo = get_node("/root/game")
+@onready var gameinfo = get_node("/root/Game")
 # button + other mechanics (coming soon) can only be interacted w/ if it is their turn or anarchy state
 var playerhand
 var playerdeck
