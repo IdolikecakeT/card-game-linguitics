@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://b5mljpqpelhc8"]
 
 [ext_resource type="Script" uid="uid://cmhn5inaj3a3w" path="res://cards/noun_chair.gd" id="1_1ouca"]
+[ext_resource type="Texture2D" uid="uid://cj11x5ollgkhp" path="res://assets/cardblue.png" id="2_i6ikf"]
 
-[node name="noun_chair" type="Node2D" unique_id=1295459210]
+[node name="noun_chair" type="Control" unique_id=1705192243]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_1ouca")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=878158962]
+texture_filter = 1
+position = Vector2(-7.6293945e-06, 3.8146973e-06)
+scale = Vector2(5, 5)
+texture = ExtResource("2_i6ikf")

@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://84rj26wx5emm"]
 
 [ext_resource type="Script" uid="uid://dfi52abcgoylx" path="res://cards/specialist_sorry!.gd" id="1_1qspv"]
+[ext_resource type="Texture2D" uid="uid://ctfn8vdiic857" path="res://assets/cardyellow.png" id="2_5ecc2"]
 
-[node name="specialist_sorry!" type="Node2D" unique_id=828418988]
+[node name="specialist_sorry!" type="Control" unique_id=601813249]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_1qspv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1506139182]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("2_5ecc2")

@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://mikdra0s71ip"]
 
-[node name="hand" type="Node2D" unique_id=1290350709]
+[ext_resource type="Script" uid="uid://bmmgme4dteah" path="res://hand.gd" id="1_u4p2i"]
+
+[node name="hand" type="Control" unique_id=628944523]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u4p2i")
+
+[node name="handui" type="HBoxContainer" parent="." unique_id=1192665470]
+texture_repeat = 2
+custom_minimum_size = Vector2(2.44, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 511.0
+offset_right = 648.22
+offset_bottom = 521.0
+theme_override_constants/separation = 80
+alignment = 1
