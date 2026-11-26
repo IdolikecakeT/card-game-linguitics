@@ -11,7 +11,7 @@ class Playerdata:
 func get_current_player():
 	return [players[current_player],current_player]
 
-func get_all_scenes(directory_path: String) -> Array:
+func get_all_cards(directory_path: String) -> Array:
 	var dir = DirAccess.open(directory_path)
 	var scene_files = []
 
@@ -25,8 +25,9 @@ func get_all_scenes(directory_path: String) -> Array:
 
 	var file_name = dir.get_next()
 
-	while file_name != "":
-		print(file_name)
+		while file_name != "":
+			if file_name.ends_with(".tres"):
+				scene_files.append(directory_path + file_name)
 
 		if file_name.ends_with(".tscn"):
 			scene_files.append(directory_path + file_name)
@@ -48,6 +49,8 @@ func _ready() -> void:
 			players[player].deck.append(cards)
 			
 	$drawacard.startout(players)
+	pass # Replace with function body.
+	playerdeck =get_all_cards ("res://cards/")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

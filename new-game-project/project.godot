@@ -21,10 +21,6 @@ window/size/viewport_width=648
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
-
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -32,3 +28,4 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
